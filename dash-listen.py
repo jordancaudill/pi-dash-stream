@@ -1,6 +1,7 @@
 import pexpect
 from scapy.all import *
-Boolean inGame = false
+Boolean ingame
+ingame = true
 def arp_display(pkt):
   if pkt[ARP].op == 1: #who-has (request)
     if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
