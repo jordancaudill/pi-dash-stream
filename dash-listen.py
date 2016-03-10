@@ -2,7 +2,7 @@ import pexpect
 from scapy.all import *
 
 def arp_display(pkt):
-ingame = False
+  ingame = False
   if pkt[ARP].op == 1: #who-has (request)
     if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
       if pkt[ARP].hwsrc == 'a0:02:dc:9b:74:3d':
