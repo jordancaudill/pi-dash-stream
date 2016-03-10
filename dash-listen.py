@@ -3,7 +3,7 @@ from scapy.all import *
 
 def arp_display(pkt):
   try:
-    ingame = game.isalive()
+    ingame = gamed.isalive()
   except NameError:
     ingame = False
   else:
@@ -13,7 +13,7 @@ def arp_display(pkt):
       if pkt[ARP].hwsrc == 'a0:02:dc:9b:74:3d':
         if ingame == False:
           print "Connecting to dash button, then running script"
-          game = pexpect.spawn('sudo moonlight stream 192.168.1.11 -1080 -localaudio')
+          gamed = pexpect.spawn('sudo moonlight stream 192.168.1.11 -1080 -localaudio')
           ingame = True
         else:
           print "Closing game"
