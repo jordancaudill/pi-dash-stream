@@ -9,4 +9,4 @@ def arp_display(pkt):
       else:
         print "ARP Probe from unknown device: " + pkt[ARP].hwsrc
 
-print sniff(prn=arp_display, filter="arp", store=0, count=10)
+print sniff(prn=arp_display, filter="arp", store=0, count=0)
